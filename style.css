@@ -1,0 +1,1471 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Open+Sans:wght@400;500;600;700;800&family=Orbitron:wght@400;500&family=Outfit:wght@200;400;700&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@200;300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,800;0,900;1,700&family=Roboto:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 16px;
+  --prim-clr: #e24b5b;
+  --sec-clr: #00bcd4;
+  --tert-clr: #2f2d59;
+  --wht-clr: white;
+  --blk-clr: black;
+  --grey-clr: #eeeeee;
+}
+
+/* ---------------------------- Header ------------------------ */
+
+#head {
+  height: 5rem;
+  background-color: var(--sec-clr);
+  display: flex;
+}
+
+#logo {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 4rem;
+}
+
+#logo img {
+  width: 14rem;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 100%;
+  display: none;
+  justify-content: center;
+}
+
+#ham-btn {
+  background: var(--prim-clr);
+  color: var(--wht-clr);
+  padding: 0.8rem 1rem;
+  font-size: 1.42rem;
+  border-radius: 15px;
+  border: 0;
+  outline: 0;
+}
+
+#navBar {
+  flex: 2.4;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#navBarHam {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+#navBar a,
+#navBarHam a {
+  font-size: 1.1rem;
+  font-family: raleway;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.6px;
+  transition: 0.4s;
+  font-weight: 600;
+}
+
+#navBar a:hover {
+  color: var(--prim-clr);
+}
+
+#btn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#btn button {
+  padding: 0.8rem 1.1rem;
+  border: 0;
+  outline: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--prim-clr);
+  text-transform: uppercase;
+  color: var(--wht-clr);
+  font-family: raleway;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+#btn button:hover {
+  background-color: var(--sec-clr);
+  border: 2px solid var(--prim-clr);
+  color: var(--prim-clr);
+}
+
+/* ---------------------------- First Container ------------------------ */
+
+#container-one {
+  width: 100%;
+  height: 36rem;
+  display: flex;
+}
+
+.heroInfo {
+  width: 54%;
+  height: 36rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 0rem 4rem;
+}
+
+.heroInfo div:first-child {
+  font-size: 1.3rem;
+  font-family: open sans;
+  color: var(--prim-clr);
+  font-weight: 500;
+  padding: 0rem 0.5rem;
+}
+
+.heroInfo h1 {
+  font-size: 5rem;
+  font-family: raleway;
+  font-weight: 700;
+  color: var(--tert-clr);
+}
+
+.heroInfo div:nth-child(3) {
+  font-size: 0.93rem;
+  font-family: open sans;
+  font-weight: 400;
+
+  color: var(--blk-clr);
+  padding: 0rem 0.5rem;
+}
+
+.heroImage {
+  width: 46%;
+  height: 36rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage img {
+  width: 64%;
+}
+
+/* ---------------------------- Pricing Grids ------------------------ */
+
+#pricing {
+  width: 100%;
+  height: 15rem;
+  display: grid;
+  grid-template-areas: "it1 it2 it3 it4 it4";
+  padding: 0rem 4rem;
+}
+
+.pItem {
+  background-color: var(--grey-clr);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 4rem;
+}
+
+.pItem:not(:last-child) h3 {
+  font-family: open sans;
+  font-size: 4rem;
+  color: var(--tert-clr);
+  font-weight: 800;
+}
+
+.pItem:not(:last-child) div:nth-child(2) {
+  font-family: open sans;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--prim-clr);
+}
+
+.pItem:not(:last-child) div:nth-child(3) {
+  font-family: open sans;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blk-clr);
+  padding-top: 1.6rem;
+}
+
+.pItem1 {
+  grid-area: it1;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: 2px dotted var(--sec-clr);
+}
+
+.pItem2 {
+  grid-area: it2;
+  border-right: 2px dotted var(--sec-clr);
+}
+
+.pItem3 {
+  grid-area: it3;
+}
+
+.pItem4 {
+  grid-area: it4;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  background-color: var(--sec-clr);
+}
+
+.pItem4 div:nth-child(1) {
+  font-family: open sans;
+  font-size: 1.5rem;
+  color: var(--wht-clr);
+}
+
+.pItem4 h3 {
+  font-family: open sans;
+  font-size: 4rem;
+  color: var(--tert-clr);
+  font-weight: 800;
+}
+
+.pItem4 div:nth-child(3) {
+  font-family: open sans;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--blk-clr);
+  padding-top: 1.6rem;
+}
+
+/* ----------------------------  About ------------------------ */
+
+#about {
+  width: 100%;
+  height: 32rem;
+  display: flex;
+  padding: 0rem 4rem;
+}
+
+.aboutCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  height: 24rem;
+  background-color: var(--sec-clr);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card div {
+  font-family: open sans;
+  padding: 0rem 3rem;
+}
+
+.card div:first-child {
+  font-family: open sans;
+  font-size: 4rem;
+  color: var(--tert-clr);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.card div:nth-child(2),
+.card div:nth-child(4) {
+  font-size: 1.4rem;
+  color: var(--wht-clr);
+  letter-spacing: 0.4px;
+  padding: 0rem 3rem;
+}
+
+.card div:nth-child(3),
+.card div:nth-child(5) {
+  color: var(--blk-clr);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+}
+
+.aboutCont {
+  flex: 2.5;
+  padding: 4rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 2.4rem;
+  align-items: flex-start;
+}
+
+.aboutCont h3 {
+  font-family: raleway;
+  font-size: 3rem;
+  color: var(--tert-clr);
+}
+
+.aboutCont div:nth-child(2),
+.aboutCont div:nth-child(3) {
+  color: var(--blk-clr);
+  font-size: 0.92rem;
+  font-family: open sans;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+}
+
+.aboutCont button {
+  background-color: var(--prim-clr);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: raleway;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--wht-clr);
+  transition: 0.4s;
+}
+
+.aboutCont button:hover {
+  background-color: var(--wht-clr);
+  border: 2px solid var(--prim-clr);
+  color: var(--prim-clr);
+}
+
+/* ----------------------------  Horizontal line ------------------------ */
+
+hr {
+  width: 90.5%;
+  position: relative;
+  left: 4.8%;
+}
+
+/* ----------------------------  Benefit ------------------------ */
+
+#benefit {
+  width: 100%;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bText {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 4rem;
+}
+
+.bText h3 {
+  font-family: raleway;
+  font-size: 3rem;
+  color: var(--tert-clr);
+}
+
+.bImages {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+}
+
+.bImg1,
+.bImg2,
+.bImg3 {
+  width: 33.33%;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.2rem;
+  padding: 0rem 4rem;
+}
+
+.bImg1 img,
+.bImg2 img,
+.bImg3 img {
+  width: 33%;
+}
+
+.bImg1 p,
+.bImg2 p,
+.bImg3 p {
+  font-family: open sans;
+  font-size: 1rem;
+}
+
+/* ----------------------------  CTA ------------------------ */
+
+#CTA {
+  width: 100%;
+  height: 27rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.CTAcont {
+  width: 100%;
+  height: 25rem;
+  background-color: var(--tert-clr);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.CTAcont img:first-child,
+.CTAcont img:last-child {
+  width: 19%;
+  margin: 0rem 0rem -4.5rem 0rem;
+}
+
+.CTAcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.CTAcontent h3 {
+  font-family: raleway;
+  font-size: 3rem;
+  color: var(--sec-clr);
+  text-align: center;
+}
+
+.CTAcontent p {
+  font-family: open sans;
+  font-size: 1.25rem;
+  color: var(--wht-clr);
+  text-align: center;
+}
+
+.CTAcontent button {
+  border: 0;
+  outline: 0;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  background-color: var(--prim-clr);
+  color: var(--wht-clr);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.CTAcontent button:hover {
+  background-color: var(--tert-clr);
+  border: 2px solid var(--prim-clr);
+  color: var(--prim-clr);
+}
+
+/* Now the only thing is remaining is to add media queries */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------  Media Queries -------------------------------------------- */
+
+/* ----------------------------  Small Mobiles  ------------------------ */
+
+@media only screen and (max-width: 320px) {
+
+  /* ------------- Header ------------- */
+  #head {
+    height: 26rem;
+    flex-direction: column;
+  }
+
+  #logo {
+    justify-content: center;
+    flex: 1;
+    padding-left: 0rem;
+    padding: 1rem 1rem;
+  }
+
+  #logo img {
+    width: 12rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #navBar {
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.86rem;
+    display: none;
+  }
+
+  #btn {
+    justify-content: center;
+    padding: 0.89rem 0rem;
+  }
+
+  /* ------------- First Container ------------- */
+  #container-one {
+    flex-direction: column;
+  }
+
+  .heroInfo {
+    width: 100%;
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .heroInfo div:first-child {
+    font-size: 0.9rem;
+    padding: 0rem 0rem;
+  }
+
+  .heroInfo h1 {
+    font-size: 2.4rem;
+  }
+
+  .heroInfo div:nth-child(3) {
+    font-size: 0.7rem;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 35rem;
+  }
+
+  .heroImage img {
+    width: 70%;
+  }
+
+  /* ------------- Pricing ------------- */
+
+  #pricing {
+    height: 46rem;
+    grid-template-areas:
+      "it1 it1 it1 it1"
+      "it2 it2 it2 it2"
+      "it3 it3 it3 it3"
+      "it4 it4 it4 it4";
+
+    padding: 1.5rem 1.5rem;
+  }
+
+  .pItem {
+    padding: 2rem;
+  }
+
+  .pItem:not(:last-child) h3 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .pItem:not(:last-child) div:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .pItem:not(:last-child) div:nth-child(3) {
+    font-size: 0.6rem;
+    padding-top: 1rem;
+  }
+
+  .pItem1 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+    border-right: 0;
+  }
+
+  .pItem2 {
+    border-right: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+  }
+
+  .pItem4 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .pItem4 div:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .pItem4 h3 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .pItem4 div:nth-child(3) {
+    font-size: 1.02rem;
+    padding-top: 1rem;
+  }
+
+  /* ------------- About ------------- */
+
+  #about {
+    height: 70rem;
+    flex-direction: column;
+    padding: 0rem 0rem;
+  }
+
+  .aboutCard {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+
+  .aboutCont {
+    padding: 1rem 1rem;
+    row-gap: 0rem;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .aboutCont h3 {
+    font-size: 1.69rem;
+  }
+
+  .aboutCont div:nth-child(2),
+  .aboutCont div:nth-child(3) {
+    font-size: 0.8rem;
+  }
+
+  .aboutCont button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* ------------- hr ------------- */
+
+  /* ------------- benefit ------------- */
+
+  #benefit {
+    height: 41rem;
+  }
+
+  .bText {
+    padding: 0rem 1rem;
+  }
+
+  .bText h3 {
+    font-size: 2rem;
+  }
+
+  .bImages {
+    height: 30rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .bImg1,
+  .bImg2,
+  .bImg3 {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0rem 1.5rem;
+  }
+
+  .bImg1 p,
+  .bImg2 p,
+  .bImg3 p {
+    font-size: 0.8rem;
+  }
+
+  /* ------------- CTA ------------- */
+
+  #CTA {
+    height: 45rem;
+  }
+
+  .CTAcont {
+    height: 45rem;
+    flex-direction: column;
+  }
+
+  .CTAcont img:first-child,
+  .CTAcont img:last-child {
+    width: 48%;
+    margin: 0;
+    padding: 0rem 1rem;
+  }
+
+  .CTAcontent h3 {
+    font-size: 2rem;
+  }
+
+  .CTAcontent p {
+    font-size: 0.8rem;
+  }
+
+  .CTAcontent button {
+    padding: 0.9rem 2rem;
+  }
+}
+
+/* ----------------------------  Medium Mobiles  ------------------------ */
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+
+  /* ------------- Header ------------- */
+  #head {
+    height: 26rem;
+    flex-direction: column;
+  }
+
+  #logo {
+    flex: 1;
+    justify-content: center;
+    padding-left: 0rem;
+    padding: 1rem 1rem;
+  }
+
+  #logo img {
+    width: 12rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #navBar {
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.86rem;
+    display: none;
+  }
+
+  #btn {
+    justify-content: center;
+    padding: 0.89rem 0rem;
+  }
+
+  /* ------------- First Container ------------- */
+  #container-one {
+    flex-direction: column;
+  }
+
+  .heroInfo {
+    width: 100%;
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .heroInfo div:first-child {
+    font-size: 0.9rem;
+    padding: 0rem 0rem;
+  }
+
+  .heroInfo h1 {
+    font-size: 2.4rem;
+  }
+
+  .heroInfo div:nth-child(3) {
+    font-size: 0.7rem;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 42rem;
+  }
+
+  .heroImage img {
+    width: 65%;
+  }
+
+  /* ------------- Pricing ------------- */
+
+  #pricing {
+    height: 47rem;
+    grid-template-areas:
+      "it1 it1 it1 it1"
+      "it2 it2 it2 it2"
+      "it3 it3 it3 it3"
+      "it4 it4 it4 it4";
+
+    padding: 1.5rem 3rem;
+  }
+
+  .pItem {
+    padding: 2rem;
+  }
+
+  .pItem:not(:last-child) h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .pItem:not(:last-child) div:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .pItem:not(:last-child) div:nth-child(3) {
+    font-size: 0.6rem;
+    padding-top: 1rem;
+  }
+
+  .pItem1 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+    border-right: 0;
+  }
+
+  .pItem2 {
+    border-right: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+  }
+
+  .pItem4 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .pItem4 div:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .pItem4 h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .pItem4 div:nth-child(3) {
+    font-size: 1.02rem;
+    padding-top: 1rem;
+  }
+
+  /* ------------- About ------------- */
+
+  #about {
+    height: 60rem;
+    flex-direction: column;
+    padding: 0rem 0rem;
+  }
+
+  .aboutCard {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+
+  .aboutCont {
+    padding: 1rem 1rem;
+    row-gap: 1.4rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .aboutCont h3 {
+    font-size: 1.69rem;
+  }
+
+  .aboutCont div:nth-child(2),
+  .aboutCont div:nth-child(3) {
+    font-size: 0.8rem;
+  }
+
+  .aboutCont button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* ------------- hr ------------- */
+
+  /* ------------- benefit ------------- */
+
+  #benefit {
+    height: 50rem;
+  }
+
+  .bText {
+    padding: 0rem 1rem;
+    height: 8rem;
+  }
+
+  .bText h3 {
+    font-size: 2rem;
+  }
+
+  .bImages {
+    height: 36rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .bImg1,
+  .bImg2,
+  .bImg3 {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0rem 1.5rem;
+  }
+
+  .bImg1 p,
+  .bImg2 p,
+  .bImg3 p {
+    font-size: 0.8rem;
+  }
+
+  /* ------------- CTA ------------- */
+
+  #CTA {
+    height: 45rem;
+  }
+
+  .CTAcont {
+    height: 56rem;
+    flex-direction: column;
+  }
+
+  .CTAcont img:first-child,
+  .CTAcont img:last-child {
+    width: 48%;
+    margin: 0;
+    padding: 0rem 1rem;
+  }
+
+  .CTAcontent h3 {
+    font-size: 2rem;
+  }
+
+  .CTAcontent p {
+    font-size: 0.8rem;
+  }
+
+  .CTAcontent button {
+    padding: 0.9rem 2rem;
+  }
+}
+
+/* ----------------------------  Large Mobiles  ------------------------ */
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+
+  /* ------------- Header ------------- */
+  #head {
+    height: 18rem;
+    flex-direction: column;
+  }
+
+  #logo {
+    justify-content: center;
+    padding-left: 0rem;
+    padding: 1rem 1rem;
+  }
+
+  #logo img {
+    width: 13rem;
+  }
+
+  #navBar {
+    padding: 0rem 2rem;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 0rem;
+    column-gap: 3.2rem;
+  }
+
+  #btn {
+    justify-content: center;
+    padding: 1.2rem 0rem;
+  }
+
+  /* ------------- First Container ------------- */
+  #container-one {
+    height: 54rem;
+    flex-direction: column;
+  }
+
+  .heroInfo {
+    width: 100%;
+    row-gap: 1rem;
+    padding: 0rem 1rem;
+    height: 25rem;
+  }
+
+  .heroInfo div:first-child {
+    font-size: 1.5rem;
+    padding: 0rem 0rem;
+  }
+
+  .heroInfo h1 {
+    font-size: 4.07rem;
+  }
+
+  .heroInfo div:nth-child(3) {
+    font-size: 0.83rem;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 29rem;
+  }
+
+  .heroImage img {
+    width: 52%;
+  }
+
+  /* ------------- Pricing ------------- */
+
+  #pricing {
+    height: 80rem;
+    grid-template-areas:
+      "it1 it1 it1 it1"
+      "it2 it2 it2 it2"
+      "it3 it3 it3 it3"
+      "it4 it4 it4 it4";
+
+    padding: 2.5rem 6.5rem;
+  }
+
+  .pItem {
+    padding: 2rem;
+  }
+
+  .pItem:not(:last-child) h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  .pItem:not(:last-child) div:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .pItem:not(:last-child) div:nth-child(3) {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  .pItem1 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+    border-right: 0;
+  }
+
+  .pItem2 {
+    border-right: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+  }
+
+  .pItem4 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .pItem4 div:nth-child(1) {
+    font-size: 2rem;
+  }
+
+  .pItem4 h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  .pItem4 div:nth-child(3) {
+    font-size: 1.1rem;
+    padding-top: 1rem;
+  }
+
+  /* ------------- About ------------- */
+
+  #about {
+    height: 57rem;
+    flex-direction: column;
+    padding: 0rem 0rem;
+  }
+
+  .aboutCard {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+
+  .aboutCont {
+    padding: 1rem 1rem;
+    row-gap: 1.4rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .aboutCont h3 {
+    font-size: 2.5rem;
+  }
+
+  .aboutCont div:nth-child(2),
+  .aboutCont div:nth-child(3) {
+    font-size: 0.9rem;
+  }
+
+  .aboutCont button {
+    padding: 1rem 2.5rem;
+  }
+
+  /* ------------- hr ------------- */
+
+  /* ------------- benefit ------------- */
+
+  #benefit {
+    height: 52rem;
+  }
+
+  .bText {
+    padding: 0rem 1rem;
+    height: 8rem;
+  }
+
+  .bText h3 {
+    font-size: 2rem;
+  }
+
+  .bImages {
+    height: 38rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .bImg1,
+  .bImg2,
+  .bImg3 {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0rem 1rem;
+  }
+
+  .bImg1 img,
+  .bImg2 img,
+  .bImg3 img {
+    width: 22%;
+  }
+
+  .bImg1 p,
+  .bImg2 p,
+  .bImg3 p {
+    font-size: 1.1rem;
+  }
+
+  /* ------------- CTA ------------- */
+
+  #CTA {
+    height: 74rem;
+    align-items: center;
+  }
+
+  .CTAcont {
+    height: 72rem;
+    flex-direction: column;
+  }
+
+  .CTAcont img:first-child,
+  .CTAcont img:last-child {
+    width: 37%;
+    margin: 0;
+    padding: 2rem 0rem;
+  }
+
+  .CTAcontent {
+    row-gap: 3rem;
+  }
+
+  .CTAcontent h3 {
+    font-size: 3rem;
+  }
+
+  .CTAcontent p {
+    font-size: 1rem;
+  }
+
+  .CTAcontent button {
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* ----------------------------  Tablets and laptops  ------------------------ */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* ------------- Header ------------- */
+
+  #logo {
+    flex: 1.5;
+  }
+
+  #logo img {
+    width: 14rem;
+  }
+
+  #navBar {
+    flex: 2;
+  }
+
+  #navBar a {
+    font-size: 1rem;
+  }
+
+  #navBar a:hover {
+    color: var(--prim-clr);
+  }
+
+  #btn {
+    flex: 0.8;
+  }
+
+  /* ------------- First Container ------------- */
+  #container-one {
+    height: 26rem;
+  }
+
+  .heroInfo {
+    height: 26rem;
+  }
+
+  .heroInfo div:first-child {
+    font-size: 1.1rem;
+  }
+
+  .heroInfo h1 {
+    font-size: 2.85rem;
+  }
+
+  .heroInfo div:nth-child(3) {
+    font-size: 0.7rem;
+  }
+
+  .heroImage {
+    height: 26rem;
+  }
+
+  .heroImage img {
+    width: 68%;
+  }
+
+  /* ------------- Pricing ------------- */
+
+  #pricing {
+    height: 40rem;
+    grid-template-areas:
+      "it1 it1 it2 it2"
+      "it3 it3 it4 it4";
+
+    padding: 3rem 6.5rem;
+  }
+
+  .pItem {
+    padding: 2rem;
+  }
+
+  .pItem:not(:last-child) h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  .pItem:not(:last-child) div:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .pItem:not(:last-child) div:nth-child(3) {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  .pItem1 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0;
+    border-bottom: 2px dotted var(--sec-clr);
+  }
+
+  .pItem2 {
+    border-top-right-radius: 30px;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .pItem3 {
+    border-bottom-left-radius: 30px;
+  }
+
+  .pItem4 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .pItem4 div:nth-child(1) {
+    font-size: 2rem;
+  }
+
+  .pItem4 h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  .pItem4 div:nth-child(3) {
+    font-size: 1.1rem;
+    padding-top: 1rem;
+  }
+
+  /* ------------- About ------------- */
+
+  #about {
+    height: 34rem;
+    padding: 0rem 3rem;
+  }
+
+  .aboutCard {
+    flex: 1;
+  }
+
+  .card {
+    width: 94%;
+  }
+
+  .card div {
+    font-family: open sans;
+    padding: 0rem 3rem;
+  }
+
+  .card div:first-child {
+    font-size: 3rem;
+  }
+
+  .card div:nth-child(2),
+  .card div:nth-child(4) {
+    font-size: 1rem;
+  }
+
+  .card div:nth-child(3),
+  .card div:nth-child(5) {
+    font-size: 0.8rem;
+  }
+
+  .aboutCont {
+    flex: 2;
+    justify-content: space-evenly;
+  }
+
+  .aboutCont h3 {
+    font-size: 2.5rem;
+  }
+
+  /* ------------- hr ------------- */
+
+  /* ------------- benefit ------------- */
+
+  #benefit {
+    height: 22rem;
+  }
+
+  .bText {
+    height: 9rem;
+  }
+
+  .bText h3 {
+    font-size: 2.5rem;
+  }
+
+  .bImages {
+    height: 12rem;
+    padding: 0rem 4rem;
+  }
+
+  .bImg1,
+  .bImg2,
+  .bImg3 {
+    padding: 0rem 0rem;
+  }
+
+  .bImg1 img,
+  .bImg2 img,
+  .bImg3 img {
+    width: 42%;
+  }
+
+  .bImg1 p,
+  .bImg2 p,
+  .bImg3 p {
+    font-size: 0.79rem;
+  }
+
+  /* ------------- CTA ------------- */
+
+  #CTA {
+    height: 26rem;
+  }
+
+  .CTAcont img:first-child,
+  .CTAcont img:last-child {
+    width: 18%;
+    margin: 0rem 0rem -4.5rem 0rem;
+  }
+}
+
+/* ----------------------------  Large laptops  ------------------------ */
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* ------------- Header ------------- */
+
+  /* ------------- First Container ------------- */
+
+  .heroInfo h1 {
+    font-size: 4.24rem;
+  }
+
+  .heroImage img {
+    width: 15rem;
+  }
+
+  /* ------------- Pricing ------------- */
+
+  .pItem {
+    padding-left: 2.5rem;
+  }
+
+  /* ------------- About ------------- */
+
+  /* ------------- hr ------------- */
+
+  /* ------------- benefit ------------- */
+
+  /* ------------- CTA ------------- */
+}
